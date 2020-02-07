@@ -29,48 +29,8 @@ function msg_int(v){ //this is the default function, which computes binary seque
 	
 	if (inlet == 0){ //which inlet? FROM INLET1
 		//post("inlet1 received INT " + v + "\n");
-		R = Math.abs(v);
+		intcomb(v);
 		
-		if (N > 1 && R <= N){ //IF THERE IS A USER DEFINED "N" FROM INLET2 and R is considered valid THEN COMPUTE THE COMBINATIONS of R from N
-			var binarray = new Array(N); //create a array with the user defined lenght of (N)
-			var nrcases = Math.pow(2,N); //Compute the total number of cases of combinations from "n" (N) possible numbers. 
-			var sum = 0;
-			
-			for (i=1; i<nrcases; i++){
-				binarray = dec2binary(i,N);
-				sum = binarray.reduce(Sum, 0); //SUM array to verify how many activations
-				//post ("SUM ", sum,"\n");
-				
-				if ( sum == R){
-					outlet(0,binarray); //Output array IF the number of activations equals R
-					
-				} else if (R == 0) {
-					outlet(0,binarray); //IF R equals 0 then, output all possible combinations
-					
-				}			
-			}
-			outlet(1, "n", N);
-			outlet(1, "r", R);
-			outlet(1, "combinations", nrCombinations(R,N));
-			
-		}
-		else { //COMPUTE COMBINATIONS OF R WHILE N IS NOT DEFINED
-			var binarray = new Array(R); //create a array with the length of R while "N" is not defined
-			var nrcases = Math.pow(2,R); //Compute the total number of cases of combinations from (n) possible numbers. 
-			
-			for (i=1; i<nrcases; i++){
-				binarray = dec2binary(i,R);
-				outlet(0,binarray);
-				
-				//outlet(1,"activations", findActives(binarray));
-				
-				//https://javascript.info/array-methods
-				//https://developer.mozilla.org/pt-PT/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-			}
-			//outlet(1, "n", R); //exceptional case!!!
-			outlet(1, "r", R);
-			outlet(1, "combinations", nrcases-1); //EXCEPTION:only cases with activations are considered valid
-		}
 	} else { //from INLET2, sets the user defined N, that will define the bit length of generated binary sequences
 		
 		if (v > 1){
@@ -78,6 +38,51 @@ function msg_int(v){ //this is the default function, which computes binary seque
 			post("inlet2 received int,", N, "N possibilities","\n");
 			
 		}
+	}
+}
+
+function intcomb(v){
+	
+	R = Math.abs(v);
+	if (N > 1 && R <= N){ //IF THERE IS A USER DEFINED "N" FROM INLET2 and R is considered valid THEN COMPUTE THE COMBINATIONS of R from N
+		var binarray = new Array(N); //create a array with the user defined lenght of (N)
+		var nrcases = Math.pow(2,N); //Compute the total number of cases of combinations from "n" (N) possible numbers. 
+		var sum = 0;
+		
+		for (i=1; i<nrcases; i++){
+			binarray = dec2binary(i,N);
+			sum = binarray.reduce(Sum, 0); //SUM array to verify how many activations
+			//post ("SUM ", sum,"\n");
+			
+			if ( sum == R){
+				outlet(0,binarray); //Output array IF the number of activations equals R
+				
+			} else if (R == 0) {
+				outlet(0,binarray); //IF R equals 0 then, output all possible combinations
+					
+			}			
+		}
+		outlet(1, "n", N);
+		outlet(1, "r", R);
+		outlet(1, "combinations", nrCombinations(R,N));
+		
+	}
+	else { //COMPUTE COMBINATIONS OF R WHILE N IS NOT DEFINED
+		var binarray = new Array(R); //create a array with the length of R while "N" is not defined
+		var nrcases = Math.pow(2,R); //Compute the total number of cases of combinations from (n) possible numbers. 
+		
+		for (i=1; i<nrcases; i++){
+			binarray = dec2binary(i,R);
+			outlet(0,binarray);
+			
+			//outlet(1,"activations", findActives(binarray));
+			
+			//https://javascript.info/array-methods
+			//https://developer.mozilla.org/pt-PT/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+		}
+		//outlet(1, "n", R); //exceptional case!!!
+		outlet(1, "r", R);
+		outlet(1, "combinations", nrcases-1); //EXCEPTION:only cases with activations are considered valid
 	}
 }
 
@@ -109,14 +114,21 @@ function list(){
  	}	
 	else { //FROM INLET 1 store and trigger computation of all possible combinations
 		ITEMLIST = arrayfromargs(arguments);
-		//N = ITEMLIST.length; 	//Make behaviour similar to INT when N is undefined!!!
-		post("inlet1 received list", ITEMLIST, "\n");
-		listcomb(ITEMLIST.length); //when the list is received on the first inlet, perform all possible combinations on that list
+		
+		if (ITEMLIST.length == 2 && ITEMLIST[0]<=ITEMLIST[1]){ //Is this a list of items OR a 2item list to compute combinations of numbers?
+			N = Math.abs(ITEMLIST[1]);
+			intcomb(ITEMLIST[0]);
+			
+		} else {
+			post("inlet1 received list", ITEMLIST, "\n");
+			listcomb(ITEMLIST.length); //when the list is received on the first inlet, perform all possible combinations on that list
+		}
+		
 	}
 }
 
 
-function listcomb(v){ //this function expects a integer.
+function listcomb(v){ //this function expects a integer (R) to compute combinations from a list of items.
 //Compute combinations from a user defined list of items
 
 	if (inlet == 0){ //FROM INLET_1

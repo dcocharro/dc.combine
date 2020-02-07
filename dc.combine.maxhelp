@@ -39,11 +39,82 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 451.5, 434.0, 54.0, 20.0 ],
+					"text" : "print Ex4b"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 388.5, 434.0, 54.0, 20.0 ],
+					"text" : "print Ex4a"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
+					"id" : "obj-14",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 443.0, 353.5, 240.0, 44.0 ],
+					"presentation_linecount" : 3,
+					"text" : "Another option to generate combinations is to send a message as list [R N] ex. combinations of 3 out of 5 possibilities."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-33",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 388.5, 364.5, 29.5, 22.0 ],
+					"text" : "3 5"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-36",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 388.5, 398.857146999999998, 82.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "dc.combine.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js dc.combine"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-35",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 146.5, 570.0, 54.0, 20.0 ],
+					"patching_rect" : [ 116.5, 585.0, 54.0, 20.0 ],
 					"text" : "print Ex3b"
 				}
 
@@ -57,7 +128,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 203.0, 478.0, 55.0, 22.0 ],
+					"patching_rect" : [ 173.0, 493.0, 55.0, 22.0 ],
 					"text" : "1 2 3 4 5"
 				}
 
@@ -70,7 +141,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 83.5, 445.0, 44.0, 20.0 ]
+					"patching_rect" : [ 53.5, 460.0, 44.0, 20.0 ]
 				}
 
 			}
@@ -80,7 +151,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 83.5, 537.0, 54.0, 20.0 ],
+					"patching_rect" : [ 53.5, 552.0, 54.0, 20.0 ],
 					"text" : "print Ex3a"
 				}
 
@@ -95,7 +166,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 120.5, 410.0, 222.0, 66.0 ],
+					"patching_rect" : [ 90.5, 425.0, 222.0, 66.0 ],
 					"text" : "It's also possible to perform combinations on a user defined list of numbers.\n1) store the list in inlet2.\n2) Send message 'listcomb $1' to compute combinations of R items."
 				}
 
@@ -109,7 +180,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 83.5, 415.5, 29.5, 22.0 ],
+					"patching_rect" : [ 53.5, 430.5, 29.5, 22.0 ],
 					"text" : "3"
 				}
 
@@ -123,9 +194,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 83.5, 501.857146999999998, 82.0, 22.0 ],
+					"patching_rect" : [ 53.5, 516.857146999999941, 82.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "dc.combine",
+						"filename" : "dc.combine.js",
 						"parameter_enable" : 0
 					}
 ,
@@ -139,7 +210,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 334.5, 308.0, 54.0, 20.0 ],
+					"patching_rect" : [ 289.5, 308.0, 54.0, 20.0 ],
 					"text" : "print Ex2b"
 				}
 
@@ -152,7 +223,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 334.5, 246.0, 44.0, 20.0 ]
+					"patching_rect" : [ 289.5, 246.0, 44.0, 20.0 ]
 				}
 
 			}
@@ -165,7 +236,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 334.5, 216.5, 29.5, 22.0 ],
+					"patching_rect" : [ 289.5, 216.5, 29.5, 22.0 ],
 					"text" : "5"
 				}
 
@@ -178,7 +249,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 271.5, 246.0, 44.0, 20.0 ]
+					"patching_rect" : [ 226.5, 246.0, 44.0, 20.0 ]
 				}
 
 			}
@@ -188,7 +259,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 271.5, 308.0, 54.0, 20.0 ],
+					"patching_rect" : [ 226.5, 308.0, 54.0, 20.0 ],
 					"text" : "print Ex2a"
 				}
 
@@ -203,7 +274,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 386.5, 205.5, 240.0, 55.0 ],
+					"patching_rect" : [ 341.5, 205.5, 240.0, 55.0 ],
 					"text" : "Or, first define the number of possibilities, N (5, inlet2), then trigger combinations of R (3, inlet1).\nIf R=0, then computes all possible combinations.\nOutlet2, gives a report."
 				}
 
@@ -217,7 +288,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 271.5, 216.5, 29.5, 22.0 ],
+					"patching_rect" : [ 226.5, 216.5, 29.5, 22.0 ],
 					"text" : "3"
 				}
 
@@ -231,9 +302,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 271.5, 272.857146999999998, 82.0, 22.0 ],
+					"patching_rect" : [ 226.5, 272.857146999999998, 82.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "dc.combine",
+						"filename" : "dc.combine.js",
 						"parameter_enable" : 0
 					}
 ,
@@ -262,7 +333,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 203.0, 507.0, 99.0, 22.0 ],
+					"patching_rect" : [ 173.0, 522.0, 99.0, 22.0 ],
 					"text" : "0 1 2 3 5 8 13 21"
 				}
 
@@ -275,7 +346,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 203.0, 535.857146999999941, 165.0, 22.0 ],
+					"patching_rect" : [ 173.0, 550.857146999999941, 165.0, 22.0 ],
 					"text" : "0.2 0.3 0.5 0.7 1.1 1.3 1.7 1.9"
 				}
 
@@ -287,7 +358,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 83.5, 474.0, 59.0, 20.0 ],
+					"patching_rect" : [ 53.5, 489.0, 59.0, 20.0 ],
 					"text" : "listcomb $1"
 				}
 
@@ -355,7 +426,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 53.5, 167.857146999999998, 82.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "dc.combine",
+						"filename" : "dc.combine.js",
 						"parameter_enable" : 0
 					}
 ,
@@ -525,8 +596,29 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-36", 0 ],
+					"source" : [ "obj-33", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-29", 1 ],
 					"source" : [ "obj-34", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-36", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-36", 1 ]
 				}
 
 			}
@@ -554,8 +646,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "dc.combine.js",
-				"bootpath" : "~/MEOCloud/PDMD/PROJETOS/RHYTHM-FFT/DFT explore/dc.combine/code",
-				"patcherrelativepath" : "../code",
+				"bootpath" : "~/Documents/GitHub/dc.combine",
+				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
