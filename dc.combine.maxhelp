@@ -39,12 +39,109 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-37",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 456.5, 619.0, 54.0, 20.0 ],
+					"text" : "print Ex5b"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-38",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 393.5, 464.142853000000059, 55.0, 22.0 ],
+					"text" : "1 2 3 4 5"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-40",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 393.5, 586.0, 54.0, 20.0 ],
+					"text" : "print Ex5a"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
+					"id" : "obj-41",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 494.5, 448.0, 222.0, 44.0 ],
+					"presentation_linecount" : 3,
+					"text" : "Sending a list with more than 2 items on inlet1 triggers all possible combinations immediatly."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-43",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 393.5, 550.857146999999941, 82.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "dc.combine",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js dc.combine"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 12.0,
+					"id" : "obj-44",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 393.5, 493.142853000000059, 99.0, 22.0 ],
+					"text" : "0 1 2 3 5 8 13 21"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 12.0,
+					"id" : "obj-45",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 393.5, 522.0, 165.0, 22.0 ],
+					"text" : "0.2 0.3 0.5 0.7 1.1 1.3 1.7 1.9"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 451.5, 434.0, 54.0, 20.0 ],
-					"text" : "print Ex4b"
+					"patching_rect" : [ 451.5, 374.0, 54.0, 20.0 ],
+					"text" : "print Ex3b"
 				}
 
 			}
@@ -54,8 +151,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 388.5, 434.0, 54.0, 20.0 ],
-					"text" : "print Ex4a"
+					"patching_rect" : [ 388.5, 374.0, 54.0, 20.0 ],
+					"text" : "print Ex3a"
 				}
 
 			}
@@ -69,7 +166,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 443.0, 353.5, 240.0, 44.0 ],
+					"patching_rect" : [ 443.0, 293.5, 240.0, 44.0 ],
 					"presentation_linecount" : 3,
 					"text" : "Another option to generate combinations is to send a message as list [R N] ex. combinations of 3 out of 5 possibilities."
 				}
@@ -84,7 +181,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 388.5, 364.5, 29.5, 22.0 ],
+					"patching_rect" : [ 388.5, 304.5, 29.5, 22.0 ],
 					"text" : "3 5"
 				}
 
@@ -98,7 +195,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 388.5, 398.857146999999998, 82.0, 22.0 ],
+					"patching_rect" : [ 388.5, 338.857146999999998, 82.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "dc.combine.js",
 						"parameter_enable" : 0
@@ -115,7 +212,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 116.5, 585.0, 54.0, 20.0 ],
-					"text" : "print Ex3b"
+					"text" : "print Ex4b"
 				}
 
 			}
@@ -152,7 +249,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 53.5, 552.0, 54.0, 20.0 ],
-					"text" : "print Ex3a"
+					"text" : "print Ex4a"
 				}
 
 			}
@@ -166,7 +263,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 90.5, 425.0, 222.0, 66.0 ],
+					"patching_rect" : [ 90.5, 411.0, 222.0, 66.0 ],
 					"text" : "It's also possible to perform combinations on a user defined list of numbers.\n1) store the list in inlet2.\n2) Send message 'listcomb $1' to compute combinations of R items."
 				}
 
@@ -210,7 +307,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 289.5, 308.0, 54.0, 20.0 ],
+					"patching_rect" : [ 289.5, 278.0, 54.0, 20.0 ],
 					"text" : "print Ex2b"
 				}
 
@@ -223,7 +320,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 289.5, 246.0, 44.0, 20.0 ]
+					"patching_rect" : [ 289.5, 216.0, 44.0, 20.0 ]
 				}
 
 			}
@@ -236,7 +333,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 289.5, 216.5, 29.5, 22.0 ],
+					"patching_rect" : [ 289.5, 186.5, 29.5, 22.0 ],
 					"text" : "5"
 				}
 
@@ -249,7 +346,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 226.5, 246.0, 44.0, 20.0 ]
+					"patching_rect" : [ 226.5, 216.0, 44.0, 20.0 ]
 				}
 
 			}
@@ -259,7 +356,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 226.5, 308.0, 54.0, 20.0 ],
+					"patching_rect" : [ 226.5, 278.0, 54.0, 20.0 ],
 					"text" : "print Ex2a"
 				}
 
@@ -270,12 +367,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-18",
-					"linecount" : 4,
+					"linecount" : 5,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 341.5, 205.5, 240.0, 55.0 ],
-					"text" : "Or, first define the number of possibilities, N (5, inlet2), then trigger combinations of R (3, inlet1).\nIf R=0, then computes all possible combinations.\nOutlet2, gives a report."
+					"patching_rect" : [ 337.5, 164.5, 240.0, 66.0 ],
+					"text" : "Or: \n1)define the number of possibilities, N (5, inlet2), 2) trigger combinations of R (3, inlet1).\nIf R=0, then computes all possible combinations.\nOutlet2, gives a report."
 				}
 
 			}
@@ -288,7 +385,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 226.5, 216.5, 29.5, 22.0 ],
+					"patching_rect" : [ 226.5, 186.5, 29.5, 22.0 ],
 					"text" : "3"
 				}
 
@@ -302,7 +399,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 226.5, 272.857146999999998, 82.0, 22.0 ],
+					"patching_rect" : [ 226.5, 242.857146999999998, 82.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "dc.combine.js",
 						"parameter_enable" : 0
@@ -392,12 +489,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-31",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 90.5, 106.0, 149.0, 33.0 ],
-					"text" : "Single integer computes all possible combinations of R"
+					"patching_rect" : [ 90.5, 106.0, 149.0, 44.0 ],
+					"text" : "Single integer computes all possible combinations of R\nwhile N is undefined."
 				}
 
 			}
@@ -445,7 +542,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 32.0, 678.0, 33.0 ],
-					"text" : "Generate combinations of numbers as a list of distribution (activations as a binary sequence), or with user defined list of items.\nThe order of number is not important and repetition of numbers are not allowed.",
+					"text" : "Generate combinations of numbers as a distribution list (activations), or with a user defined list of items.\nThe order of number is not important and repetition of numbers are not allowed.",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -619,6 +716,41 @@
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-36", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-43", 0 ],
+					"source" : [ "obj-38", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-37", 0 ],
+					"source" : [ "obj-43", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-40", 0 ],
+					"source" : [ "obj-43", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-43", 0 ],
+					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-43", 0 ],
+					"source" : [ "obj-45", 0 ]
 				}
 
 			}
